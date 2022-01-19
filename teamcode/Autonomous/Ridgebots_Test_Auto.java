@@ -152,20 +152,7 @@ public class Ridgebots_Test_Auto extends OpMode
         angles = imu.getAngularOrientation(AxesReference.INTRINSIC, AxesOrder.ZYX, AngleUnit.DEGREES);
         switch (stage){
             case 0:
-                runtime.startTime();
-                startMotors();
-                if (angles.firstAngle > -90.0){
-                mecanumDrive_Cartesian(0.6d, 0.0d, 0.2d);}
-                else {
-                    stopMotors();
-                    nextStage(0);}
-                break;
-            case 1:
-                runtime.startTime();
-                startMotors();
-                if(angles.firstAngle > -180){
-                    mecanumDrive_Cartesian(0.6d, 0.0d, -0.5d);
-                } else {nextStage(0); }
+
                 break;
             default:
                 stopMotors();
